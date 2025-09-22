@@ -4,8 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Khumoyunmirzo | AI & Big Data Student</title>
+
+  <!-- Font Awesome CDN for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pVmlN9g+fMn1bBqxJwTzjHkTYDQx7knzRAzjhZxplhCQj+DQF55yiEKHlK6JiZ1Nln/LSLfV7CkHgpkYr6r1VA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
   <style>
-    /* Reset some default styles */
+    /* Reset and base */
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -18,15 +28,19 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      scroll-behavior: smooth;
     }
     a {
       color: #4fc3f7;
       text-decoration: none;
       transition: color 0.3s ease;
     }
-    a:hover {
+    a:hover, a:focus {
       color: #81d4fa;
+      outline: none;
     }
+
+    /* Header */
     header {
       background-color: #1f2937;
       padding: 20px 40px;
@@ -34,6 +48,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     header h1 {
       margin: 0;
@@ -43,240 +60,197 @@
     nav a {
       margin-left: 20px;
       font-weight: 600;
+      font-size: 1rem;
     }
+    nav a i {
+      margin-right: 6px;
+    }
+
+    /* Main content */
     main {
       flex: 1;
-      max-width: 900px;
+      max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
     }
+
+    /* Intro Section */
     .intro {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
     .intro h2 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+      font-size: 2.7rem;
+      margin-bottom: 15px;
       color: #4fc3f7;
+      font-weight: 700;
     }
     .intro p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto;
+      font-size: 1.25rem;
+      max-width: 720px;
+      margin: 0 auto 25px;
       color: #cfd8dc;
     }
     .profile-img {
       display: block;
-      margin: 30px auto;
+      margin: 0 auto 40px;
       max-width: 300px;
       border-radius: 15px;
-      box-shadow: 0 6px 15px rgba(79, 195, 247, 0.5);
+      box-shadow: 0 6px 15px rgba(79, 195, 247, 0.6);
       transition: transform 0.3s ease;
+      cursor: default;
     }
     .profile-img:hover {
-      transform: scale(1.05);
+      transform: scale(1.07);
     }
-    section {
-      margin-bottom: 50px;
+
+    /* Skills Section */
+    #skills {
+      margin-bottom: 60px;
     }
-    h3 {
+    #skills h3 {
       color: #81d4fa;
       border-bottom: 2px solid #4fc3f7;
       padding-bottom: 8px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       font-weight: 700;
-    }
-    ul {
-      list-style: inside disc;
-      max-width: 700px;
-      margin: 0 auto;
-      padding-left: 0;
-      color: #b0bec5;
-    }
-    ul li {
-      margin-bottom: 8px;
-    }
-    footer {
-      background-color: #1f2937;
-      text-align: center;
-      padding: 15px 20px;
-      font-size: 0.9rem;
-      color: #78909c;
-      box-shadow: 0 -2px 5px rgba(0,0,0,0.7);
-    }
-    /* Responsive */
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-      nav a {
-        margin-left: 0;
-        margin: 10px;
-        display: inline-block;
-      }
-      main {
-        margin: 20px 10px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-<header>
-  <h1>Khumoyunmirzo</h1>
-  <nav>
-    <a href="#about">About Me</a>
-    <a href="#skills">Skills</a>
-    <a href="#hobbies">Hobbies</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<main>
-  <section id="about" class="intro">
-    <h2>AI & Big Data Student at Woosong University</h2>
-    <p>
-      Hello! I’m Khumoyunmirzo, a passionate student focused on artificial intelligence and big data. My goal is to become a skilled programmer in the AI sphere and contribute to innovative technology solutions.
-    </p>
-    <img
-      src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
-      alt="Hiking in nature"
-      class="profile-img"
-    />
-  </section>
-
-  <section id="skills">
-    <h3>Skills & Interests</h3>
-    <ul>
-      <li>Programming languages: Python, Java, SQL</li>
-      <li>AI and Machine Learning concepts</li>
-      <li>Big Data analytics and visualization</li>
-      <li>Problem-solving and critical thinking</li>
-    </ul>
-  </section>
-
-  <section id="hobbies">
-    <h3>Hobbies & Personal Life</h3>
-    <p>
-      When I’m not studying, I love hiking in nature to refresh my mind and body. Spending quality time with friends is important to me, helping me maintain balance and motivation.
-    </p>
-  </section>
-
-  <section id="contact">
-    <h3>Contact Me</h3>
-    <p>If you'd like to connect or collaborate, feel free to reach out:</p>
-    <ul>
-      <li>Email: <a href="mailto:khumoyunmirzo@example.com">khumoyunmirzo@example.com</a></li>
-      <li>GitHub: <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">github.com/yourusername</a></li>
-      <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourprofile</a></li>
-    </ul>
-  </section>
-</main>
-
-<footer>
-  &copy; 2025 Khumoyunmirzo. All rights reserved.
-</footer>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Khumoyunmirzo | AI & Big Data Student</title>
-  <style>
-    /* Reset some default styles */
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background: #121212;
-      color: #f0f0f0;
-      line-height: 1.6;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-    a {
-      color: #4fc3f7;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    a:hover {
-      color: #81d4fa;
-    }
-    header {
-      background-color: #1f2937;
-      padding: 20px 40px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.7);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header h1 {
-      margin: 0;
       font-size: 1.8rem;
-      letter-spacing: 1px;
     }
-    nav a {
-      margin-left: 20px;
-      font-weight: 600;
-    }
-    main {
-      flex: 1;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    .intro {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .intro h2 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      color: #4fc3f7;
-    }
-    .intro p {
-      font-size: 1.2rem;
-      max-width: 700px;
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 720px;
       margin: 0 auto;
+    }
+    .skill-item {
+      background: #1f2937;
+      padding: 20px 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(79,195,247,0.4);
+      width: 220px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+      cursor: default;
+    }
+    .skill-item:hover {
+      background: #2979ff33;
+    }
+    .skill-item i {
+      font-size: 2.8rem;
+      color: #4fc3f7;
+      margin-bottom: 10px;
+    }
+    .skill-item p {
+      margin: 0;
+      font-weight: 600;
       color: #cfd8dc;
+      font-size: 1.1rem;
     }
-    .profile-img {
-      display: block;
-      margin: 30px auto;
-      max-width: 300px;
-      border-radius: 15px;
-      box-shadow: 0 6px 15px rgba(79, 195, 247, 0.5);
-      transition: transform 0.3s ease;
+
+    /* Gallery Section */
+    #gallery {
+      margin-bottom: 60px;
     }
-    .profile-img:hover {
+    #gallery h3 {
+      color: #81d4fa;
+      border-bottom: 2px solid #4fc3f7;
+      padding-bottom: 8px;
+      margin-bottom: 25px;
+      font-weight: 700;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(79, 195, 247, 0.5);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery-grid img:hover {
       transform: scale(1.05);
+      box-shadow: 0 8px 24px rgba(79, 195, 247, 0.9);
     }
-    section {
-      margin-bottom: 50px;
+
+    /* Hobbies Section */
+    #hobbies {
+      margin-bottom: 60px;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    h3 {
+    #hobbies h3 {
       color: #81d4fa;
       border-bottom: 2px solid #4fc3f7;
       padding-bottom: 8px;
       margin-bottom: 20px;
       font-weight: 700;
+      font-size: 1.8rem;
+      text-align: center;
     }
-    ul {
-      list-style: inside disc;
-      max-width: 700px;
-      margin: 0 auto;
+    #hobbies p {
+      font-size: 1.2rem;
+      color: #cfd8dc;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    /* Contact Section */
+    #contact {
+      max-width: 720px;
+      margin: 0 auto 60px;
+    }
+    #contact h3 {
+      color: #81d4fa;
+      border-bottom: 2px solid #4fc3f7;
+      padding-bottom: 8px;
+      margin-bottom: 25px;
+      font-weight: 700;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+    #contact p {
+      font-size: 1.1rem;
+      color: #cfd8dc;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .contact-list {
+      list-style: none;
       padding-left: 0;
+      max-width: 500px;
+      margin: 0 auto;
       color: #b0bec5;
     }
-    ul li {
-      margin-bottom: 8px;
+    .contact-list li {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      justify-content: center;
     }
+    .contact-list a {
+      color: #4fc3f7;
+      word-break: break-word;
+    }
+    .contact-list i {
+      color: #81d4fa;
+      font-size: 1.3rem;
+      min-width: 20px;
+      text-align: center;
+    }
+
+    /* Footer */
     footer {
       background-color: #1f2937;
       text-align: center;
@@ -285,19 +259,34 @@
       color: #78909c;
       box-shadow: 0 -2px 5px rgba(0,0,0,0.7);
     }
+
     /* Responsive */
-    @media (max-width: 600px) {
+    @media (max-width: 650px) {
       header {
         flex-direction: column;
         text-align: center;
+        gap: 10px;
       }
       nav a {
         margin-left: 0;
-        margin: 10px;
+        margin: 8px 12px;
         display: inline-block;
       }
-      main {
-        margin: 20px 10px;
+      .skills-list {
+        flex-direction: column;
+        align-items: center;
+      }
+      .skill-item {
+        width: 90%;
+        max-width: 300px;
+      }
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 400px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -306,53 +295,89 @@
 
 <header>
   <h1>Khumoyunmirzo</h1>
-  <nav>
-    <a href="#about">About Me</a>
-    <a href="#skills">Skills</a>
-    <a href="#hobbies">Hobbies</a>
-    <a href="#contact">Contact</a>
+  <nav aria-label="Primary navigation">
+    <a href="#about" tabindex="0"><i class="fas fa-user"></i>About Me</a>
+    <a href="#skills" tabindex="0"><i class="fas fa-code"></i>Skills</a>
+    <a href="#gallery" tabindex="0"><i class="fas fa-image"></i>Gallery</a>
+    <a href="#hobbies" tabindex="0"><i class="fas fa-heart"></i>Hobbies</a>
+    <a href="#contact" tabindex="0"><i class="fas fa-envelope"></i>Contact</a>
   </nav>
 </header>
 
 <main>
-  <section id="about" class="intro">
+
+  <section id="about" class="intro" tabindex="0">
     <h2>AI & Big Data Student at Woosong University</h2>
     <p>
       Hello! I’m Khumoyunmirzo, a passionate student focused on artificial intelligence and big data. My goal is to become a skilled programmer in the AI sphere and contribute to innovative technology solutions.
     </p>
     <img
       src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
-      alt="Hiking in nature"
+      alt="Photo of Khumoyunmirzo hiking in nature"
       class="profile-img"
+      loading="lazy"
     />
   </section>
 
-  <section id="skills">
+  <section id="skills" tabindex="0">
     <h3>Skills & Interests</h3>
-    <ul>
-      <li>Programming languages: Python, Java, SQL</li>
-      <li>AI and Machine Learning concepts</li>
-      <li>Big Data analytics and visualization</li>
-      <li>Problem-solving and critical thinking</li>
-    </ul>
+    <div class="skills-list">
+      <div class="skill-item" title="Python Programming">
+        <i class="fab fa-python"></i>
+        <p>Python</p>
+      </div>
+      <div class="skill-item" title="Java Programming">
+        <i class="fab fa-java"></i>
+        <p>Java</p>
+      </div>
+      <div class="skill-item" title="SQL Databases">
+        <i class="fas fa-database"></i>
+        <p>SQL</p>
+      </div>
+      <div class="skill-item" title="AI and Machine Learning">
+        <i class="fas fa-robot"></i>
+        <p>AI & Machine Learning</p>
+      </div>
+      <div class="skill-item" title="Big Data Analytics & Visualization">
+        <i class="fas fa-chart-line"></i>
+        <p>Big Data Analytics</p>
+      </div>
+      <div class="skill-item" title="Problem Solving & Critical Thinking">
+        <i class="fas fa-lightbulb"></i>
+        <p>Problem Solving</p>
+      </div>
+    </div>
   </section>
 
-  <section id="hobbies">
+  <section id="gallery" tabindex="0">
+    <h3>Gallery</h3>
+    <div class="gallery-grid" aria-label="Photo gallery">
+      <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=600&q=80" alt="Mountain landscape" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1517816428104-6b29c3e7e14f?auto=format&fit=crop&w=600&q=80" alt="Coding on laptop" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="AI robot" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="Big data visualization" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Nature trail" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="Team collaboration" loading="lazy" />
+    </div>
+  </section>
+
+  <section id="hobbies" tabindex="0">
     <h3>Hobbies & Personal Life</h3>
     <p>
       When I’m not studying, I love hiking in nature to refresh my mind and body. Spending quality time with friends is important to me, helping me maintain balance and motivation.
     </p>
   </section>
 
-  <section id="contact">
+  <section id="contact" tabindex="0">
     <h3>Contact Me</h3>
     <p>If you'd like to connect or collaborate, feel free to reach out:</p>
-    <ul>
-      <li>Email: <a href="mailto:khumoyunmirzo@example.com">khumoyunmirzo@example.com</a></li>
-      <li>GitHub: <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">github.com/yourusername</a></li>
-      <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourprofile</a></li>
+    <ul class="contact-list">
+      <li><i class="fas fa-envelope"></i><a href="mailto:sirojovkhumoyunmir@gmail.com">sirojovkhumoyunmir@gmail.com</a></li>
+      <li><i class="fab fa-github"></i><a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">github.com/yourusername</a></li>
+      <li><i class="fab fa-linkedin"></i><a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourprofile</a></li>
     </ul>
   </section>
+
 </main>
 
 <footer>
@@ -361,3 +386,4 @@
 
 </body>
 </html>
+
